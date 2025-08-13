@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Left Panel: Book List -->
+        <div class="left-panel">
+            <h1>📚 Library Management</h1>
+            <table id="bookTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th>Genre</th>
+                        <th>Status</th>
+                        <th>Due Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Books will be injected here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Right Panel: Controls -->
+        <div class="right-panel">
+            <input type="text" id="searchInput" placeholder="Search by title, author, ISBN...">
+
+            <h2>Add New Book</h2>
+            <form id="addBookForm">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="text" id="isbn" placeholder="ISBN" required>
+                <input type="text" id="genre" placeholder="Genre" required>
+                <button type="submit">Add Book</button>
+            </form>
+
+            <h2>Library Stats</h2>
+            <div class="stats">
+                <p>Total Books: <span id="totalBooks">0</span></p>
+                <p>Available: <span id="availableBooks">0</span></p>
+                <p>Borrowed: <span id="borrowedBooks">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
